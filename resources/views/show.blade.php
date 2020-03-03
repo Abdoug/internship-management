@@ -1,7 +1,6 @@
 @extends('layouts.skeleton')
 @section('content')
 
-
 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
     <!-- begin:: Subheader -->
@@ -2001,9 +2000,6 @@
     <!-- end:: Content -->
 </div>
 
-<!-- begin:: Footer -->
-@include('includes.footer')
-<!-- end:: Footer -->
-
 </div>
+
 @endsection

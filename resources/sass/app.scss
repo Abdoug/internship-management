@@ -1,3 +1,11 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
 // base style
 @import "../theme/src/assets/sass/style";
 
@@ -5,4 +13,5 @@
 @import "../theme/src/assets/sass/global/layout/aside/skins/navy";
 @import "../theme/src/assets/sass/global/layout/brand/skins/navy";
 @import "../theme/src/assets/sass/global/layout/header/skins/base/light";
-@import "../theme/src/assets/sass/global/layout/header/skins/menu/light";//
+@import "../theme/src/assets/sass/global/layout/header/skins/menu/light";
+@import "../theme/src/assets/sass/pages/login/login-v1";

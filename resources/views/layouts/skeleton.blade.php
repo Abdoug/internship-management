@@ -31,6 +31,10 @@
                 @yield('content')
                 <!-- end:: Wrapper -->
 
+                <!-- begin:: Footer -->
+                @include('includes.footer')
+                <!-- end:: Footer -->
+
             </div>
 
         </div>

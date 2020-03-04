@@ -29,3 +29,4 @@ require("../../src/assets/js/global/layout/demo-panel");
 require("../../src/assets/js/global/layout/offcanvas-panel");
 require("../../src/assets/js/global/layout/quick-panel");
 require("../../src/assets/js/global/layout/quick-search");
+require("../../src/assets/js/pages/dashboard");

@@ -13,6 +13,12 @@
 
 Route::get('/', function () {
     return view('index');
+})->name('auth');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        return view('show');
+    });
 });
 
 Auth::routes();

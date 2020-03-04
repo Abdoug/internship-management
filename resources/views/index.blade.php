@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-Theme: Keen - The Ultimate Bootstrap Admin Theme
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-License: You must have a valid license purchased only from https://themes.getbootstrap.com/product/keen-the-ultimate-bootstrap-admin-theme/ in order to legally use the theme for your project.
--->
 <html lang="en">
 
 <!-- begin::Head -->
@@ -57,10 +47,10 @@ License: You must have a valid license purchased only from https://themes.getboo
                             <img src="assets/media/logos/logo-4.png" alt="" />
                         </a>
                     </div>
-                    <div class="kt-login-v1__signup">
+                    <!-- <div class="kt-login-v1__signup">
                         <h4 class="kt-login-v1__heading">Don't have an account?</h4>
                         <a href="#">Sign Up</a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!--begin::Head-->
@@ -77,8 +67,8 @@ License: You must have a valid license purchased only from https://themes.getboo
                     <!--begin::Section-->
                     <div class="kt-login-v1__section">
                         <div class="kt-login-v1__info">
-                            <h3 class="kt-login-v1__intro">Whatever CTA's wave purpose important exit element</h3>
-                            <p>Lorem ipsum lian amet estudiat</p>
+                            <h3 class="kt-login-v1__intro">Welcome to </h3>
+                            <p>An application which can improve and enhance your internship management</p>
                         </div>
                     </div>
 
@@ -97,16 +87,17 @@ License: You must have a valid license purchased only from https://themes.getboo
                             </h3>
 
                             <!--begin::Form-->
-                            <form class="kt-login-v1__form kt-form" action="" autocomplete="off" id="kt_login_form">
+                            <form class="kt-login-v1__form kt-form" method="POST" action="{{ route('login') }}" autocomplete="off" id="kt_login_form">
+                                @csrf
                                 <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Username" name="username" autocomplete="off">
+                                    <input class="form-control @error('email') is-invalid @enderror" type="text" placeholder="{{ __('E-Mail Address') }}" name="email" required autocomplete="off">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" type="password" placeholder="Password" name="password" autocomplete="off">
+                                    <input class="form-control @error('password') is-invalid @enderror" type="password" placeholder="Password" name="password" required autocomplete="current-password">
                                 </div>
                                 <div class="kt-login-v1__actions">
                                     <a href="#" class="kt-login-v1__forgot">
-                                        Forgot Password ?
+                                        <!-- Forgot Password ? -->
                                     </a>
                                     <button type="submit" class="btn btn-pill btn-elevate" id="kt_login_submit">Sign In</button>
                                 </div>
@@ -115,18 +106,18 @@ License: You must have a valid license purchased only from https://themes.getboo
                             <!--end::Form-->
 
                             <!--begin::Divider-->
-                            <div class="kt-login-v1__divider">
+                            <!-- <div class="kt-login-v1__divider">
                                 <div class="kt-divider">
                                     <span></span>
                                     <span>OR</span>
                                     <span></span>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!--end::Divider-->
 
                             <!--begin::Options-->
-                            <div class="kt-login-v1__options">
+                            <!-- <div class="kt-login-v1__options">
                                 <a href="#" class="btn">
                                     <i class="fab fa-facebook-f"></i>
                                     Fcebook
@@ -139,7 +130,7 @@ License: You must have a valid license purchased only from https://themes.getboo
                                     <i class="fab fa-google"></i>
                                     Google
                                 </a>
-                            </div>
+                            </div> -->
 
                             <!--end::Options-->
                         </div>
@@ -156,13 +147,13 @@ License: You must have a valid license purchased only from https://themes.getboo
             <!--begin::Item-->
             <div class="kt-grid__item">
                 <div class="kt-login-v1__footer">
-                    <div class="kt-login-v1__menu">
+                    <!-- <div class="kt-login-v1__menu">
                         <a href="#">Privacy</a>
                         <a href="#">Legal</a>
                         <a href="#">Contact</a>
-                    </div>
+                    </div> -->
                     <div class="kt-login-v1__copyright">
-                        <a href="#">&copy; 2018 KeenThemes</a>
+                        <a href="#">&copy; 2020 Developed by Abdoug</a>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
     <!-- begin:: Header Menu -->
     <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
     <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
-        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout- ">
+        <!-- <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout- ">
             <ul class="kt-menu__nav ">
                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel kt-menu__item--active" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Pages</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
@@ -119,7 +119,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 
     <!-- end:: Header Menu -->
@@ -128,7 +128,7 @@
     <div class="kt-header__topbar">
 
         <!--begin: Search -->
-        <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown">
+        <!-- <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown">
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
                 <span class="kt-header__topbar-icon"><i class="flaticon2-search-1"></i></span>
             </div>
@@ -145,12 +145,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!--end: Search -->
 
         <!--begin: Notifications -->
-        <div class="kt-header__topbar-item dropdown">
+        <!-- <div class="kt-header__topbar-item dropdown">
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px">
                 <span class="kt-header__topbar-icon">
                     <i class="flaticon2-bell-alarm-symbol"></i>
@@ -323,21 +323,21 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> -->
 
         <!--end: Notifications -->
 
         <!--begin: Quick Actions -->
-        <div class="kt-header__topbar-item">
+        <!-- <div class="kt-header__topbar-item">
             <div class="kt-header__topbar-wrapper" id="kt_offcanvas_toolbar_quick_actions_toggler_btn">
                 <span class="kt-header__topbar-icon"><i class="flaticon2-gear"></i></span>
             </div>
-        </div>
+        </div> -->
 
         <!--end: Quick Actions -->
 
         <!--begin:: Languages -->
-        <div class="kt-header__topbar-item kt-header__topbar-item--langs">
+        <!-- <div class="kt-header__topbar-item kt-header__topbar-item--langs">
             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
                 <span class="kt-header__topbar-icon">
                     <img class="" src="assets/media/flags/226-united-states.svg" alt="" />
@@ -365,7 +365,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
         <!--end:: Languages -->
 
@@ -376,14 +376,14 @@
                 <!--use "kt-rounded" class for rounded avatar style-->
                 <div class="kt-header__topbar-user kt-rounded-">
                     <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span>
-                    <span class="kt-header__topbar-username kt-hidden-mobile">Sean</span>
+                    <span class="kt-header__topbar-username kt-hidden-mobile">{{Auth::user()->username}}</span>
                     <img alt="Pic" src="assets/media/users/300_25.jpg" class="kt-rounded-" />
 
                     <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
                     <span class="kt-badge kt-badge--username kt-badge--lg kt-badge--brand kt-hidden kt-badge--bold">S</span>
                 </div>
             </div>
-            <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
+            <div id='pretty' class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
                 <div class="kt-user-card kt-margin-b-40 kt-margin-b-30-tablet-and-mobile" style="background-image: url(assets/media/misc/head_bg_sm.jpg)">
                     <div class="kt-user-card__wrapper">
                         <div class="kt-user-card__pic">
@@ -392,19 +392,19 @@
                             <img alt="Pic" src="assets/media/users/300_21.jpg" class="kt-rounded-" />
                         </div>
                         <div class="kt-user-card__details">
-                            <div class="kt-user-card__name">Alex Stone</div>
-                            <div class="kt-user-card__position">CTO, Loop Inc.</div>
+                            <div class="kt-user-card__name">{{Auth::user()->firstname}} {{Auth::user()->lastname}}</div>
+                            <div class="kt-user-card__position">{{Auth::user()->typeuser}}</div>
                         </div>
                     </div>
                 </div>
                 <ul class="kt-nav kt-margin-b-10">
                     <li class="kt-nav__item">
-                        <a href="custom/profile/personal-information.html" class="kt-nav__link">
+                        <a href="#" class="kt-nav__link">
                             <span class="kt-nav__link-icon"><i class="flaticon2-calendar-3"></i></span>
-                            <span class="kt-nav__link-text">My Profile</span>
+                            <span class="kt-nav__link-text">Welcome!</span>
                         </a>
                     </li>
-                    <li class="kt-nav__item">
+                    <!-- <li class="kt-nav__item">
                         <a href="custom/profile/overview-1.html" class="kt-nav__link">
                             <span class="kt-nav__link-icon"><i class="flaticon2-browser-2"></i></span>
                             <span class="kt-nav__link-text">My Tasks</span>
@@ -421,11 +421,13 @@
                             <span class="kt-nav__link-icon"><i class="flaticon2-gear"></i></span>
                             <span class="kt-nav__link-text">Settings</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="kt-nav__separator kt-nav__separator--fit"></li>
                     <li class="kt-nav__custom kt-space-between">
-                        <a href="{{route('logout')}}" target="_blank" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
-                        <i class="flaticon2-information kt-label-font-color-2" data-toggle="kt-tooltip" data-placement="right" title="" data-original-title="Click to learn more..."></i>
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -434,11 +436,11 @@
         <!--end: User Bar -->
 
         <!--begin:: Quick Panel Toggler -->
-        <div class="kt-header__topbar-item kt-header__topbar-item--quick-panel" data-toggle="kt-tooltip" title="Quick panel" data-placement="right">
+        <!-- <div class="kt-header__topbar-item kt-header__topbar-item--quick-panel" data-toggle="kt-tooltip" title="Quick panel" data-placement="right">
             <span class="kt-header__topbar-icon" id="kt_quick_panel_toggler_btn">
                 <i class="flaticon2-grids"></i>
             </span>
-        </div>
+        </div> -->
 
         <!--end:: Quick Panel Toggler -->
     </div>

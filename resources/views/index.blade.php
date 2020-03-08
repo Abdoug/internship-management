@@ -7,7 +7,7 @@
 <head>
     <base href="../../">
     <meta charset="utf-8" />
-    <title>Keen | Login - v1</title>
+    <title>IM-APP</title>
     <meta name="description" content="User login example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,11 +24,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 
     <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!-- <link rel="shortcut icon" href="assets/media/logos/favicon.ico" /> -->
 </head>
 
 <!-- end::Head -->
-
+<style>
+    #textLogo {
+        margin-left: 5rem;
+        font-size: 30px;
+        color: cornsilk;
+    }
+</style>
 <!-- begin::Body -->
 
 <body style="background-image: url(assets/media/misc/bg_1.jpg)" class="kt-login-v1--enabled kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
@@ -43,8 +49,9 @@
                 <!--begin::Heade-->
                 <div class="kt-login-v1__head">
                     <div class="kt-login-v1__logo">
-                        <a href="#">
-                            <img src="assets/media/logos/logo-4.png" alt="" />
+                        <a href="#" id='textLogo'>
+                            IM-APP
+                            <!-- <img src="assets/media/logos/logo-4.png" alt="" /> -->
                         </a>
                     </div>
                     <!-- <div class="kt-login-v1__signup">
@@ -67,8 +74,8 @@
                     <!--begin::Section-->
                     <div class="kt-login-v1__section">
                         <div class="kt-login-v1__info">
-                            <h3 class="kt-login-v1__intro">Welcome to </h3>
-                            <p>An application which can improve and enhance your internship management</p>
+                            <h3 class="kt-login-v1__intro">Welcome to IM-APP</h3>
+                            <p>An application which can improve and enhance your Internship Management</p>
                         </div>
                     </div>
 
@@ -153,7 +160,7 @@
                         <a href="#">Contact</a>
                     </div> -->
                     <div class="kt-login-v1__copyright">
-                        <a href="#">&copy; 2020 Developed by Abdoug</a>
+                        <a href="linkedin.com/in/abderrahmane-ougouag-772630191">&copy; 2020 Developed by Abdoug</a>
                     </div>
                 </div>
             </div>

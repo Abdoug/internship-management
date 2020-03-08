@@ -16,8 +16,16 @@ Route::get('/', function () {
 })->name('auth');
 
 Route::group(['middleware' => 'auth'], function () {
+
+    //dashboard
     Route::get('/dashboard', function () {
         return view('show');
+    });
+
+    //subjects
+    Route::group(['prefix' => 'subjects'], function () {
+        Route::get('/create', 'SubjectController@create')->name('subject.create');
+        Route::get('/', 'SubjectController@index')->name('subject.index');
     });
 });
 

@@ -4,8 +4,9 @@
 	<!-- begin::Aside Brand -->
 	<div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
 		<div class="kt-aside__brand-logo">
-			<a href="index.html">
-				<img alt="Logo" src="assets/media/logos/logo-6.png" />
+			<a href="#" id='textLogo'>
+				IM-APP
+				<!-- <img alt="Logo" src="assets/media/logos/logo-6.png" /> -->
 			</a>
 		</div>
 		<div class="kt-aside__brand-tools">
@@ -19,11 +20,12 @@
 	<div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
 		<div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500">
 			<ul class="kt-menu__nav ">
-				<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Subjects</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+				<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-start-up"></i><span class="kt-menu__link-text">Subjects</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 					<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 						<ul class="kt-menu__subnav">
-							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Subject</span></a></li>
-							<li class="kt-menu__item " aria-haspopup="true"><a href="dashboards/brand-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Subjects</span></a></li>
+							<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="components/custom/colors.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a Subject</span></a></li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="components/custom/colors.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Subjects</span></a></li>
 						</ul>
 					</div>
 				</li>
@@ -35,7 +37,7 @@
 								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a stage</span></a></li>
+										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a Stage</span></a></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-2.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Stages</span></a></li>
 									</ul>
 								</div>
@@ -45,7 +47,7 @@
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Soutenance</span></a></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of soutenances</span></a></li>
+										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Soutenances</span></a></li>
 									</ul>
 								</div>
 							</li>
@@ -53,7 +55,7 @@
 								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Pv</span></a></li>
+										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a Pv</span></a></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Pvs</span></a></li>
 									</ul>
 								</div>
@@ -61,11 +63,12 @@
 						</ul>
 					</div>
 				</li>
-				<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--here" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-graphic"></i><span class="kt-menu__link-text">Companies</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+				<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i class="kt-menu__link-icon flaticon2-start-up"></i><span class="kt-menu__link-text">Companies</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 					<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 						<ul class="kt-menu__subnav">
-							<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true"><a href="index.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add company</span></a></li>
-							<li class="kt-menu__item " aria-haspopup="true"><a href="dashboards/brand-aside.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of companies</span></a></li>
+							<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="components/custom/colors.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a Company</span></a></li>
+							<li class="kt-menu__item " aria-haspopup="true"><a href="components/custom/colors.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Companies</span></a></li>
 						</ul>
 					</div>
 				</li>
@@ -77,7 +80,7 @@
 								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a user</span></a></li>
+										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a User</span></a></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/users/list-columns-2.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Users</span></a></li>
 									</ul>
 								</div>
@@ -111,7 +114,7 @@
 								<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 									<ul class="kt-menu__subnav">
 										<li class="kt-menu__item  kt-menu__item--parent" aria-haspopup="true"><span class="kt-menu__link"><span class="kt-menu__link-text"></span></span></li>
-										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add Criteria</span></a></li>
+										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Add a Criteria</span></a></li>
 										<li class="kt-menu__item " aria-haspopup="true"><a href="custom/profile/overview-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">List of Criterias</span></a></li>
 									</ul>
 								</div>

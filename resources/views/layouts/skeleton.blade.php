@@ -4,6 +4,17 @@
 <head>
     @include('includes.head')
 </head>
+<style>
+    #textLogo {
+        margin-right: 0.7rem;
+        font-size: 14px;
+        color: cornsilk;
+        background-color: #374163;
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
+    }
+</style>
 
 <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
 
@@ -28,96 +39,18 @@
                 <!-- end:: Header -->
                 <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
-                    <!-- begin:: Subheader -->
-                    <div class="kt-subheader   kt-grid__item" id="kt_subheader">
-                        <div class="kt-container  kt-container--fluid ">
-                            <div class="kt-subheader__main">
-                                <h3 class="kt-subheader__title">Dashboard</h3>
-                                <span class="kt-subheader__separator kt-hidden"></span>
-                                <div class="kt-subheader__breadcrumbs">
-                                    <a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
-                                    <span class="kt-subheader__breadcrumbs-separator"></span>
-                                    <a href="" class="kt-subheader__breadcrumbs-link">
-                                        Dashboards </a>
-                                    <span class="kt-subheader__breadcrumbs-separator"></span>
-                                    <a href="" class="kt-subheader__breadcrumbs-link">
-                                        Navy Aside </a>
-                                </div>
-                            </div>
-                            <div class="kt-subheader__toolbar">
-                                <div class="kt-subheader__wrapper">
-                                    <a href="#" class="btn btn-icon btn btn-label btn-label-brand btn-bold" data-toggle="kt-tooltip" title="Reports" data-placement="top"><i class="flaticon2-writing"></i></a>
-                                    <a href="#" class="btn btn-icon btn btn-label btn-label-brand btn-bold" data-toggle="kt-tooltip" title="Calendar" data-placement="top"><i class="flaticon2-hourglass-1"></i></a>
-                                    <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="Quick actions" data-placement="top">
-                                        <a href="#" class="btn btn-icon btn btn-label btn-label-brand btn-bold" data-toggle="dropdown" data-offset="0px,0px" aria-haspopup="true" aria-expanded="false">
-                                            <i class="flaticon2-add-1"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                            <ul class="kt-nav kt-nav--active-bg" role="tablist">
-                                                <li class="kt-nav__item">
-                                                    <a href="" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-psd"></i>
-                                                        <span class="kt-nav__link-text">Document</span>
-                                                    </a>
-                                                </li>
-                                                <li class="kt-nav__item">
-                                                    <a class="kt-nav__link" role="tab">
-                                                        <i class="kt-nav__link-icon flaticon2-supermarket"></i>
-                                                        <span class="kt-nav__link-text">Message</span>
-                                                    </a>
-                                                </li>
-                                                <li class="kt-nav__item">
-                                                    <a href="" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-shopping-cart"></i>
-                                                        <span class="kt-nav__link-text">Product</span>
-                                                    </a>
-                                                </li>
-                                                <li class="kt-nav__item">
-                                                    <a class="kt-nav__link" role="tab">
-                                                        <i class="kt-nav__link-icon flaticon2-chart2"></i>
-                                                        <span class="kt-nav__link-text">Report</span>
-                                                        <span class="kt-nav__link-badge">
-                                                            <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--rounded">pdf</span>
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                                <li class="kt-nav__item">
-                                                    <a href="" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-sms"></i>
-                                                        <span class="kt-nav__link-text">Post</span>
-                                                    </a>
-                                                </li>
-                                                <li class="kt-nav__item">
-                                                    <a href="" class="kt-nav__link">
-                                                        <i class="kt-nav__link-icon flaticon2-avatar"></i>
-                                                        <span class="kt-nav__link-text">Customer</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="btn btn-sm btn-elevate btn-brand btn-elevate" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Select dashboard daterange">
-                                        <span class="kt-opacity-7" id="kt_dashboard_daterangepicker_title">Today:</span>&nbsp;
-                                        <span class="kt-font-bold" id="kt_dashboard_daterangepicker_date">Jan 11</span>
-                                        <i class="flaticon-calendar-with-a-clock-time-tools kt-padding-l-5 kt-padding-r-0"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- end:: Subheader -->
+                    @include('includes.breadcrumb')
 
                     <!-- begin:: Content -->
                     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
                         <!-- begin:: Wrapper -->
                         @yield('content')
                         <!-- end:: Wrapper -->
-                        @include('includes.footer')
                     </div>
 
                     <!-- end:: Content -->
                 </div>
+                @include('includes.footer')
 
             </div>
         </div>

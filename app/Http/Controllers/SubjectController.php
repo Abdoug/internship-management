@@ -8,11 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class SubjectController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $user = Auth::user();
-
         $subjects = Subject::all();
+
+        if ($request->ajax()) {
+            return response()->json(
+                [
+                    'data' => $subjects
+                ]
+            );
+        }
 
         return view('subjects.index');
     }

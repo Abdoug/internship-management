@@ -6,7 +6,6 @@
  * @output plugins/global/plugins.bundle
  */
 
-
 //** Begin: Global mandatory plugins
 window.jQuery = window.$ = require("jquery");
 require("bootstrap");
@@ -35,7 +34,6 @@ window.Tooltip = Tooltip;
 require("perfect-scrollbar/css/perfect-scrollbar.css");
 window.PerfectScrollbar = require("perfect-scrollbar/dist/perfect-scrollbar");
 //** End: Globally mandatory plugins
-
 
 //** Begin: Global optional plugins
 // Owl.Carousel

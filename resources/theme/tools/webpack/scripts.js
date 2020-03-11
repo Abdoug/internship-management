@@ -21,7 +21,6 @@ window.KTWizard = require("../../src/assets/js/global/components/base/wizard");
 require("../../src/assets/js/global/components/base/datatable/core.datatable");
 require("../../src/assets/js/global/components/base/datatable/datatable.checkbox");
 require("../../src/assets/js/global/components/base/datatable/datatable.rtl");
-
 // Layout Scripts
 window.KTLayout = require("../../src/assets/js/global/layout/layout");
 window.KTLib = require("../../src/assets/js/global/layout/lib");
@@ -34,6 +33,4 @@ require("../../src/assets/js/global/integration/plugins/bootstrap-datepicker.ini
 require("../../src/assets/js/global/integration/plugins/dropzone.init");
 require("../../src/assets/js/global/integration/plugins/bootstrap-timepicker.init");
 require("../../src/assets/js/global/integration/plugins/bootstrap-markdown.init");
-require("../../src/assets/js/global/integration/plugins/datatables.init");
 require("../../src/assets/js/global/integration/plugins/bootstrap-notify.init");
-require("../../src/assets/plugins/jquery-ui/jquery-ui.min");

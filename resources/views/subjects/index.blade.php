@@ -10,13 +10,15 @@
                     <h3 class="kt-portlet__head-title">Subjects</h3>
                 </div>
             </div>
-            <div class="kt-datatable" id="kt_table_1"></div>
+            <div class="kt-datatable" id="subjects_table"></div>
         </div>
 
         <!--end::Portlet-->
     </div>
 </div>
 @endsection
+@section('script')
+@parent
 <script>
     "use strict";
     // Class definition
@@ -27,21 +29,17 @@
         // basic demo
         var demo = function() {
 
-            var datatable = $('.kt_datatable').KTDatatable({
+            let url = `{{route('subject.index')}}`;
+
+            var datatable = $('#subjects_table').KTDatatable({
                 // datasource definition
                 data: {
                     type: 'remote',
                     source: {
                         read: {
-                            url: 'https://keenthemes.com/keen/tools/preview/inc/api/datatables/demos/default2.php',
-                            map: function(raw) {
-                                // sample data mapping
-                                var dataSet = raw;
-                                if (typeof raw.data !== 'undefined') {
-                                    dataSet = raw.data;
-                                }
-                                return dataSet;
-                            },
+                            url,
+                            method: 'GET',
+                            _token: $('meta[name=csrf-token]').attr("content")
                         },
                     },
                     pageSize: 10,
@@ -67,90 +65,8 @@
 
                 // columns definition
                 columns: [{
-                    field: 'id',
-                    title: '#',
-                    sortable: false,
-                    width: 30,
-                    type: 'number',
-                    selector: false,
-                    textAlign: 'center',
-                }, {
-                    field: 'employee_id',
-                    title: 'Employee ID',
-                }, {
                     field: 'name',
-                    title: 'Name',
-                    template: function(row) {
-                        return row.first_name + ' ' + row.last_name;
-                    },
-                }, {
-                    field: 'hire_date',
-                    title: 'Hire Date',
-                    type: 'date',
-                    format: 'MM/DD/YYYY',
-                }, {
-                    field: 'gender',
-                    title: 'Gender',
-                }, {
-                    field: 'status',
-                    title: 'Status',
-                    // callback function support for column rendering
-                    template: function(row) {
-                        var status = {
-                            1: {
-                                'title': 'Pending',
-                                'class': 'kt-badge--brand'
-                            },
-                            2: {
-                                'title': 'Delivered',
-                                'class': ' kt-badge--metal'
-                            },
-                            3: {
-                                'title': 'Canceled',
-                                'class': ' kt-badge--primary'
-                            },
-                            4: {
-                                'title': 'Success',
-                                'class': ' kt-badge--success'
-                            },
-                            5: {
-                                'title': 'Info',
-                                'class': ' kt-badge--info'
-                            },
-                            6: {
-                                'title': 'Danger',
-                                'class': ' kt-badge--danger'
-                            },
-                            7: {
-                                'title': 'Warning',
-                                'class': ' kt-badge--warning'
-                            },
-                        };
-                        return '<span class="kt-badge ' + status[row.status].class + ' kt-badge--inline kt-badge--pill">' + status[row.status].title + '</span>';
-                    },
-                }, {
-                    field: 'type',
-                    title: 'Type',
-                    autoHide: false,
-                    // callback function support for column rendering
-                    template: function(row) {
-                        var status = {
-                            1: {
-                                'title': 'Online',
-                                'state': 'danger'
-                            },
-                            2: {
-                                'title': 'Retail',
-                                'state': 'primary'
-                            },
-                            3: {
-                                'title': 'Direct',
-                                'state': 'accent'
-                            },
-                        };
-                        return '<span class="kt-badge kt-badge--' + status[row.type].state + ' kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-' + status[row.type].state + '">' +
-                            status[row.type].title + '</span>';
-                    },
+                    title: 'Subject Name',
                 }, {
                     field: 'Actions',
                     title: 'Actions',
@@ -202,7 +118,8 @@
         };
     }();
 
-    jQuery(document).ready(function() {
+    $(document).ready(function() {
         KTDatatableRemoteAjaxDemo.init();
     });
 </script>
+@endsection

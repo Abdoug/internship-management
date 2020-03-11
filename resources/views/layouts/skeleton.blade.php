@@ -66,5 +66,6 @@
 <!-- begin::Global Config(global config for global JS sciprts) -->
 @include('includes.script')
 <!-- end::Global Config -->
+@yield('script')
 
 </html>

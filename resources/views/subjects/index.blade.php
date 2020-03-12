@@ -65,17 +65,38 @@
 
                 // columns definition
                 columns: [{
-                    field: 'name',
-                    title: 'Subject Name',
-                }, {
-                    field: 'Actions',
-                    title: 'Actions',
-                    sortable: false,
-                    width: 110,
-                    overflow: 'visible',
-                    autoHide: false,
-                    template: function() {
-                        return '\
+                        field: 'name',
+                        title: 'Subject Name',
+                    },
+                    {
+                        field: 'valid',
+                        title: 'Status',
+                    },
+                    {
+                        field: 'company_id',
+                        title: 'Company',
+                        sortable: false,
+                        width: 110,
+                        overflow: 'visible',
+                        autoHide: false,
+                        template: function(row, data) {
+
+                            let name = row.company.name;
+                            return name;
+                        },
+                    },
+                    {
+                        field: 'commission',
+                        title: 'Commission',
+                    }, {
+                        field: 'id',
+                        title: 'Actions',
+                        sortable: false,
+                        width: 110,
+                        overflow: 'visible',
+                        autoHide: false,
+                        template: function() {
+                            return '\
 						<div class="dropdown">\
 							<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-sm" data-toggle="dropdown">\
                                 <i class="flaticon2-gear"></i>\
@@ -93,8 +114,9 @@
 							<i class="flaticon2-trash"></i>\
 						</a>\
 					';
-                    },
-                }],
+                        },
+                    }
+                ],
 
             });
 

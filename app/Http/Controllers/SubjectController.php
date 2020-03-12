@@ -10,7 +10,7 @@ class SubjectController extends Controller
 {
     public function index(Request $request)
     {
-        $subjects = Subject::all();
+        $subjects = Subject::with('Company')->with('Commission')->get();
 
         if ($request->ajax()) {
             return response()->json(

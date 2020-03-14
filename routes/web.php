@@ -26,6 +26,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'subjects'], function () {
         Route::get('/create', 'SubjectController@create')->name('subject.create');
         Route::get('/', 'SubjectController@index')->name('subject.index');
+        Route::post('/getall', 'SubjectController@getall')->name('subject.getall');
+    });
+
+    //stages
+    Route::group(['prefix' => 'stages'], function () {
+        Route::get('/', 'StageController@index')->name('stage.index');
+        Route::post('/getall', 'StageController@getall')->name('stage.getall');
     });
 });
 

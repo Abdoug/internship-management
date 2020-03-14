@@ -17,8 +17,8 @@ class Subject extends Model
     {
         return $this->belongsTo('App\Commission');
     }
-    public function responsable()
+    public function users()
     {
-        return $this->hasOneThrough('App\User', 'App\Commission');
+        return $this->hasOneThrough('App\Commission', 'App\User');
     }
 }

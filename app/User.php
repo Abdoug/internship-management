@@ -40,6 +40,6 @@ class User extends Authenticatable
 
     public function commissions()
     {
-        return $this->belongsToMany('App\Commission');
+        return $this->belongsToMany('App\Commission')->withPivot('role');
     }
 }

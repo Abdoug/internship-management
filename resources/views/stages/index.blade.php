@@ -7,7 +7,7 @@
         <div class="kt-portlet kt-portlet--height-fluid">
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
-                    <h3 class="kt-portlet__head-title">Subjects</h3>
+                    <h3 class="kt-portlet__head-title">Stages</h3>
                 </div>
             </div>
             <div class="kt-portlet__body">
@@ -21,25 +21,10 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
-                            <div class="kt-form__group kt-form__group--inline">
-                                <div class="kt-form__label">
-                                    <label>Status:</label>
-                                </div>
-                                <div class="kt-form__control">
-                                    <select class="form-control select2" id="kt_form_status">
-                                        <option value="" selected>All</option>
-                                        <option value="pending">Pending</option>
-                                        <option value="confirmed">Confirmed</option>
-                                        <option value="canceled">Canceled</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="kt-datatable" id="subjects_table"></div>
+            <div class="kt-datatable" id="stages_table"></div>
         </div>
 
         <!--end::Portlet-->
@@ -54,9 +39,9 @@
 
     let sub_data = (status = '', search = '') => {
 
-        let url = `{{route('subject.getall')}}`;
+        let url = `{{route('stage.getall')}}`;
 
-        $('#subjects_table').KTDatatable({
+        $('#stages_table').KTDatatable({
             // datasource definition
             data: {
                 type: 'remote',
@@ -96,44 +81,36 @@
 
             // columns definition
             columns: [{
-                    field: 'name',
+                    field: 'subject_name',
                     title: 'Subject Name',
                 },
                 {
-                    field: 'valid',
-                    title: 'Status',
+                    field: 'stage',
+                    title: 'Stage ID',
                 },
                 {
-                    field: 'company_name',
-                    title: 'Company',
-                    sortable: false,
-                    width: 110,
-                    overflow: 'visible',
-                    autoHide: false,
-                    template: function(row, data) {
-
-                        let name = row.company_name;
-                        return name;
-
-                    },
+                    field: 'soutenance',
+                    title: 'Soutenance ID',
                 },
                 {
-                    field: 'commission_responsable',
-                    title: 'Commission Responsable',
-                    sortable: false,
-                    width: 110,
-                    overflow: 'visible',
-                    autoHide: false,
-                    template: function(row, data) {
-
-                        return row.commission_responsable ?
-                            row.commission_responsable : 'pending';
-
-                    },
+                    field: 'dates',
+                    title: 'Soutenance Date',
                 },
                 {
-                    field: 'id',
-                    title: 'Actions',
+                    field: 'pfe_name',
+                    title: 'PFE Name',
+                },
+                {
+                    field: 'pv',
+                    title: 'PV ID',
+                },
+                {
+                    field: 'average',
+                    title: 'Moyen',
+                },
+                {
+                    field: 'satge',
+                    title: 'Action',
                     sortable: false,
                     width: 110,
                     overflow: 'visible',
@@ -170,18 +147,6 @@
 
     $(document).ready(function() {
         sub_data();
-    });
-    $('#kt_form_status').on('change', function() {
-        $('#subjects_table').KTDatatable().destroy();
-        let status = $(this).val();
-        let search = $('#generalSearch').val().toLowerCase();
-        sub_data(status, search);
-    });
-    $('#generalSearch').on('keyup', function() {
-        $('#subjects_table').KTDatatable().destroy();
-        let status = $('#kt_form_status').val();
-        let search = $(this).val().toLowerCase();
-        sub_data(status, search);
     });
 </script>
 @endsection

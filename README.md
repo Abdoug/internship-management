@@ -1,8 +1,6 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
-<p align="center">
+<h1 align="center">
 IM-APP
-</p>
+</h1>
 
 ## About IM-APP
 
@@ -13,14 +11,21 @@ Une application qui peut améliorer et valoriser votre gestion de stage
 -   Migrations de schéma indépendantes de la base de données.
 -   Conteneur d'injection de dépendance puissant.
 
-## conditions préalables
+## Conditions préalables
 
 -   PHP Version 7.3.4
 -   Oracle InstantClient
 
 ## Code de conduite
 
+Pour connecter l'application à la BDD Oracle: Vous devez aller à la racine du projet puis au fichier: .env et définir le nom d'utilisateur, le mot de passe sur la configuration de connexion db
+
 Veuillez exécuter cette commande dans le répertoire du projet: php artisan serve
+
+Pour vous connecter à l'application, utilisez ce compte en tant que super administrateur:
+
+-   email: superadmin@gmail.com
+-   password: sporacle2020
 
 ## License
 

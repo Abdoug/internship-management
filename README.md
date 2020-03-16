@@ -18,11 +18,12 @@ Une application qui peut améliorer et valoriser votre gestion de stage
 
 ## Code de conduite
 
-Pour connecter l'application à la BDD Oracle: Vous devez aller à la racine du projet puis au fichier: .env et définir le nom d'utilisateur, le mot de passe sur la configuration de connexion db
+-   Pour connecter l'application à la BDD Oracle: Vous devez aller à la racine du projet puis au fichier: .env et définir le nom d'utilisateur, le mot de passe sur la configuration de connexion db.
 
-Veuillez exécuter cette commande dans le répertoire du projet: php artisan serve
+-   Pour acceder a l'application: Veuillez exécuter cette commande dans le répertoire du projet: php artisan serve
+    puis copiez l'adresse affichée dans la console et collez-la dans le navigateur pour accéder.
 
-Pour vous connecter à l'application, utilisez ce compte en tant que super administrateur:
+-   Pour vous connecter à l'application, utilisez ce compte en tant que super administrateur:
 
 -   email: superadmin@gmail.com
 -   password: sporacle2020
